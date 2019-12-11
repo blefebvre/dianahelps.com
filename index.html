@@ -9,19 +9,26 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/h5bp.css">
         <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
 
-        <div>
+        <div id="container">
 
             <header>
                 <h1>Diana Lefebvre, RP, PhD</h1>
                 <h2>Counselling &amp; Psychotherapy</h2>
             </header>
 
-            <section class="about">
+            <nav role="tablist">
+                <a href="#about" id="about-tab" role="tab" class="active">About</a>
+                <a href="#practice" id="practice-tab" role="tab">Practice</a>
+                <a href="#fees" id="fees-tab" role="tab">Fees</a>
+                <a href="#contact" id="contact-tab" role="tab">Contact</a>
+            </nav>
+
+            <section id="about-content" role="tabpanel">
                 <h3>About</h3>
 
                 <p>
@@ -39,7 +46,7 @@
 
             </section>
 
-            <section class="practice">
+            <section id="practice-content" role="tabpanel" class="visuallyhidden">
                 <h3>Practice</h3>
 
                 <ul>
@@ -62,7 +69,7 @@
                 </p>
             </section>
 
-            <section>
+            <section id="fees-content" role="tabpanel" class="visuallyhidden">
                 <h3>Fees</h3>
 
                 <p>
@@ -73,7 +80,7 @@
                 </p>
             </section>
 
-            <section>
+            <section id="contact-content" role="tabpanel" class="visuallyhidden">
                 <h3>Contact</h3>
 
                 <p>
@@ -83,6 +90,8 @@
                 
             </section>
         </div>
+
+        <script src="js/main.js"></script>
 
         <!-- Google Analytics -->
         <script>

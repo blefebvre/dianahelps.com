@@ -1,6 +1,29 @@
 /* Layout */
-body > div {
-  margin: 0 3%;
+#container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a,
+nav a:active,
+nav a:focus {
+  outline: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 10px 20px 4px 1px;
+}
+nav a.active {
+  border-bottom: 3px solid #555;
 }
 
 section {
@@ -15,12 +38,16 @@ body {
 
 header {
   text-align: center;
-  margin: 40px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
 }
 
 h1,
 h2 {
-  margin: 10px 0 0 0;
+  margin: 0 0 0 0;
   font-size: 1.2em;
 }
 
@@ -32,21 +59,15 @@ h3 {
   text-transform: uppercase;
 }
 
-@media (min-width: 800px) {
-  body > div {
-    width: 800px;
+@media (min-width: 730px) {
+  #container {
+    width: 700px;
     margin: 1em auto;
     padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 0.3em;
   }
 
   .header .details {
     padding-left: 1em;
-  }
-
-  header {
-    margin: 20px 0 40px 0;
   }
 }
 
