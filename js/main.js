@@ -22,6 +22,13 @@
       .querySelector(tabName + "-content")
       .classList.remove("visuallyhidden");
     currentTab = tabName;
+
+    // Fire analytics event
+    if (window.ga) {
+      var trackingUrl = tabName.replace("#", "/");
+      ga("set", "page", trackingUrl);
+      ga("send", "pageview");
+    }
   }
 
   // Listen for hash changes
@@ -29,7 +36,9 @@
     "hashchange",
     function hashChangeHandler(e) {
       e.preventDefault();
-      openTab(location.hash);
+      if (location.hash) {
+        openTab(location.hash);
+      }
     },
     false
   );
