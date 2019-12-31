@@ -24,10 +24,9 @@
     currentTab = tabName;
 
     // Fire analytics event
-    if (window.ga) {
+    if (window.gtag) {
       var trackingUrl = tabName.replace("#", "/");
-      ga("set", "page", trackingUrl);
-      ga("send", "pageview");
+      gtag("config", "GA_MEASUREMENT_ID", { page_path: trackingUrl });
     }
   }
 
