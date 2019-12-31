@@ -122,7 +122,7 @@ textarea {
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
 
-.visuallyhidden {
+.js-enabled .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -138,8 +138,8 @@ textarea {
  * when navigated to via the keyboard: h5bp.com/p
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.js-enabled .visuallyhidden.focusable:active,
+.js-enabled .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;

@@ -47,4 +47,7 @@
   if (initialHash) {
     openTab(initialHash);
   }
+
+  // JS is enabled! Set a class on the body to enable our 'hidden' class
+  document.body.className = "js-enabled";
 })();
