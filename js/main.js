@@ -26,7 +26,7 @@
     // Fire analytics event
     if (window.gtag) {
       var trackingUrl = tabName.replace("#", "/");
-      gtag("config", "GA_MEASUREMENT_ID", { page_path: trackingUrl });
+      gtag("config", "UA-41891145-2", { page_path: trackingUrl });
     }
   }
 
